@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مطعم هامورا لاند | HAMORA LAND — أبها</title>
 <meta name="description" content="منيو مطعم هامورا لاند للمأكولات البحرية في أبها — اطلب عبر واتساب">
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --blue:#2F4FA8; --blue2:#3D63C4; --navy:#16265C; --light:#D9E4F8; --light2:#EEF3FD;
-  --cream:#F7F0DC; --gold:#C9A227; --gold2:#E3C766; --ink:#1c2440; --muted:#6b7390;
-  --card:#ffffff; --line:#e3e9f7; --green:#25D366;
+  --blue:#6F6FC0; --blue2:#8A8AD2; --navy:#34347E; --light:#DCDCF2; --light2:#F2F1FA;
+  --cream:#FAF5E9; --gold:#E8491D; --gold2:#FFC4AC; --ink:#26264D; --muted:#71719C;
+  --card:#ffffff; --line:#E3E1F3; --green:#25D366;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -21,21 +22,21 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 a{text-decoration:none;color:inherit}
 
 /* ===== Header ===== */
-header{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;box-shadow:0 4px 18px rgba(22,38,92,.35)}
+header{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;box-shadow:0 4px 18px rgba(52,52,126,.35)}
 .hbar{max-width:1100px;margin:auto;display:flex;align-items:center;gap:12px;padding:10px 16px}
-.hbar .logo{width:52px;height:52px;flex:0 0 auto}
+.hbar .logo{width:52px;height:52px;flex:0 0 auto;border-radius:50%}
 .hbar .t{flex:1;line-height:1.15}
 .hbar .t b{font-family:'Aref Ruqaa',serif;font-size:22px;font-weight:700;display:block}
 .hbar .t span{font-size:11px;letter-spacing:2px;color:var(--gold2);font-weight:700}
-.cartbtn{position:relative;background:var(--gold);color:var(--navy);font-weight:800;border-radius:999px;padding:9px 16px;font-size:14px;display:flex;align-items:center;gap:7px}
+.cartbtn{position:relative;background:var(--gold);color:#fff;font-weight:800;border-radius:999px;padding:9px 16px;font-size:14px;display:flex;align-items:center;gap:7px}
 .cartbtn .n{background:var(--navy);color:#fff;border-radius:999px;min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;padding:0 5px}
 
 /* ===== Hero ===== */
-.hero{background:linear-gradient(180deg,var(--blue) 0%,var(--blue2) 70%,var(--light) 100%);color:#fff;text-align:center;padding:26px 16px 30px;position:relative;overflow:hidden}
-.hero .logo{width:118px;height:118px;margin:0 auto 8px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.35))}
+.hero{background:linear-gradient(180deg,var(--navy) 0%,var(--blue) 65%,var(--blue2) 100%);color:#fff;text-align:center;padding:26px 16px 30px;position:relative;overflow:hidden}
+.hero .logo{width:150px;height:150px;margin:0 auto 8px;border-radius:50%;filter:drop-shadow(0 8px 20px rgba(0,0,0,.35))}
 .hero h1{font-family:'Aref Ruqaa',serif;font-size:40px;line-height:1.2;text-shadow:0 2px 10px rgba(0,0,0,.25)}
 .hero .en{letter-spacing:5px;font-weight:800;color:var(--cream);font-size:15px;margin-top:2px}
-.hero p.tag{margin-top:8px;font-size:15px;color:#eaf0ff}
+.hero p.tag{margin-top:8px;font-size:15px;color:#eceaff}
 .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
 .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;backdrop-filter:blur(3px)}
 .chip b{color:var(--gold2)}
@@ -51,10 +52,10 @@ header{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,var(--
 main{max-width:1100px;margin:auto;padding:8px 14px 20px}
 section.cat{scroll-margin-top:140px;margin-top:26px}
 .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.sec-head h2{font-family:'Aref Ruqaa',serif;font-size:26px;color:var(--navy);background:var(--cream);border:1.5px solid var(--gold);border-radius:14px;padding:4px 20px 8px;box-shadow:0 3px 8px rgba(201,162,39,.25)}
+.sec-head h2{font-family:'Aref Ruqaa',serif;font-size:26px;color:var(--navy);background:var(--cream);border:1.5px solid var(--gold);border-radius:14px;padding:4px 20px 8px;box-shadow:0 3px 8px rgba(232,73,29,.25)}
 .sec-head .line{flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
-.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:6px;box-shadow:0 2px 8px rgba(22,38,92,.06)}
+.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:6px;box-shadow:0 2px 8px rgba(52,52,126,.06)}
 .item .nm{font-weight:800;font-size:16.5px;color:var(--navy)}
 .item .en{font-size:11px;letter-spacing:1px;color:var(--muted);font-weight:700;text-transform:uppercase}
 .item .ds{font-size:13px;color:#4a5470;line-height:1.7}
@@ -70,18 +71,18 @@ section.cat{scroll-margin-top:140px;margin-top:26px}
 .item.feat{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border:none;grid-column:1/-1}
 .item.feat .nm{color:#fff;font-size:20px}
 .item.feat .en{color:var(--gold2)}
-.item.feat .ds{color:#dbe6ff}
+.item.feat .ds{color:#e2e0ff}
 .item.feat .price{color:var(--gold2)}
 .item.feat .cal{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:#fff}
-.item.feat .add{background:var(--gold);color:var(--navy)}
-.badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:11px;font-weight:900;border-radius:999px;padding:2px 10px;margin-bottom:4px}
+.item.feat .add{background:var(--gold);color:#fff}
+.badge{display:inline-block;background:var(--gold);color:#fff;font-size:11px;font-weight:900;border-radius:999px;padding:2px 10px;margin-bottom:4px}
 
 /* ===== Cart bar & drawer ===== */
 .cartbar{position:fixed;bottom:0;right:0;left:0;z-index:60;background:var(--navy);color:#fff;padding:12px 16px;display:none;align-items:center;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,.3)}
 .cartbar.show{display:flex}
 .cartbar .tot{font-weight:900;font-size:17px}
 .cartbar .tot small{display:block;font-size:11px;color:var(--gold2);font-weight:700}
-.cartbar button{margin-inline-start:auto;background:var(--gold);color:var(--navy);font-weight:900;border-radius:999px;padding:11px 24px;font-size:15px}
+.cartbar button{margin-inline-start:auto;background:var(--gold);color:#fff;font-weight:900;border-radius:999px;padding:11px 24px;font-size:15px}
 .overlay{position:fixed;inset:0;background:rgba(10,18,45,.55);z-index:70;display:none}
 .overlay.show{display:block}
 .drawer{position:fixed;bottom:0;right:0;left:0;z-index:80;background:#fff;border-radius:22px 22px 0 0;max-height:88vh;overflow-y:auto;padding:18px 18px 26px;transform:translateY(105%);transition:transform .3s;max-width:640px;margin:auto}
@@ -101,14 +102,14 @@ section.cat{scroll-margin-top:140px;margin-top:26px}
 .close{position:absolute;top:14px;inset-inline-end:16px;font-size:22px;color:var(--muted);width:36px;height:36px}
 
 /* ===== Footer ===== */
-footer{background:var(--navy);color:#dbe6ff;margin-top:40px;padding:30px 16px 110px;text-align:center}
-footer .logo{width:74px;height:74px;margin:0 auto 8px}
+footer{background:var(--navy);color:#e2e0ff;margin-top:40px;padding:30px 16px 110px;text-align:center}
+footer .logo{width:84px;height:84px;margin:0 auto 8px;border-radius:50%}
 footer h4{font-family:'Aref Ruqaa',serif;color:#fff;font-size:24px}
 footer .en{letter-spacing:4px;color:var(--gold2);font-weight:800;font-size:12px}
 footer .info{margin-top:16px;font-size:14px;line-height:2}
 footer .info b{color:#fff}
 footer a.btn{display:inline-block;margin:6px 4px 0;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 20px;font-weight:800;font-size:14px;color:#fff}
-footer .copy{margin-top:18px;font-size:12px;color:#8fa3d9}
+footer .copy{margin-top:18px;font-size:12px;color:#a5a3dd}
 
 /* toast */
 .toast{position:fixed;top:84px;left:50%;transform:translate(-50%,-16px);background:var(--navy);color:#fff;font-weight:800;font-size:14px;border-radius:999px;padding:10px 22px;z-index:90;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 8px 24px rgba(0,0,0,.3)}
@@ -117,41 +118,16 @@ footer .copy{margin-top:18px;font-size:12px;color:#8fa3d9}
 </style>
 </head>
 <body>
-<!-- ===== Logo (recreated from the restaurant's printed menu emblem: ship's wheel + fish) ===== -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<defs>
-<symbol id="hamora-logo" viewBox="0 0 100 100">
-  <g stroke="#C9A227" stroke-width="4" stroke-linecap="round">
-    <line x1="50" y1="50" x2="88" y2="50"/><line x1="50" y1="50" x2="77" y2="77"/>
-    <line x1="50" y1="50" x2="50" y2="88"/><line x1="50" y1="50" x2="23" y2="77"/>
-    <line x1="50" y1="50" x2="12" y2="50"/><line x1="50" y1="50" x2="23" y2="23"/>
-    <line x1="50" y1="50" x2="50" y2="12"/><line x1="50" y1="50" x2="77" y2="23"/>
-  </g>
-  <g fill="#C9A227">
-    <circle cx="90" cy="50" r="3.6"/><circle cx="78.5" cy="78.5" r="3.6"/>
-    <circle cx="50" cy="90" r="3.6"/><circle cx="21.5" cy="78.5" r="3.6"/>
-    <circle cx="10" cy="50" r="3.6"/><circle cx="21.5" cy="21.5" r="3.6"/>
-    <circle cx="50" cy="10" r="3.6"/><circle cx="78.5" cy="21.5" r="3.6"/>
-  </g>
-  <circle cx="50" cy="50" r="30" fill="#16265C" stroke="#C9A227" stroke-width="4.5"/>
-  <circle cx="50" cy="50" r="19.5" fill="#F7F0DC"/>
-  <path d="M35 50 C42 43 52 42 57 46 L64 41 C62.5 46 62.5 54 64 59 L57 54 C52 58 42 57 35 50 Z" fill="#2F4FA8"/>
-  <circle cx="41.5" cy="48" r="1.9" fill="#F7F0DC"/>
-  <path d="M39 61 Q44 58.5 49 61 T59 61" stroke="#2F4FA8" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-</symbol>
-</defs>
-</svg>
-
 <header>
   <div class="hbar">
-    <svg class="logo"><use href="#hamora-logo"/></svg>
+    <img class="logo" src="logo.png" alt="شعار هامورا لاند">
     <div class="t"><b>هامورا لاند</b><span>HAMORA LAND</span></div>
     <button class="cartbtn" onclick="openCart()">🛒 السلة <span class="n" id="cartN">0</span></button>
   </div>
 </header>
 
 <div class="hero">
-  <svg class="logo"><use href="#hamora-logo"/></svg>
+  <img class="logo" src="logo.png" alt="شعار هامورا لاند">
   <h1>هامورا لاند</h1>
   <div class="en">HAMORA LAND</div>
   <p class="tag">ألذ المأكولات البحرية في أبها 🐟</p>
@@ -188,7 +164,7 @@ footer .copy{margin-top:18px;font-size:12px;color:#8fa3d9}
 </div>
 
 <footer>
-  <svg class="logo"><use href="#hamora-logo"/></svg>
+  <img class="logo" src="logo.png" alt="شعار هامورا لاند">
   <h4>هامورا لاند</h4>
   <div class="en">HAMORA LAND</div>
   <div class="info">
