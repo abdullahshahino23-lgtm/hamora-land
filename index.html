@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مطعم هامورا لاند | HAMORA LAND — أبها</title>
+<meta name="description" content="منيو مطعم هامورا لاند للمأكولات البحرية في أبها — اطلب عبر واتساب">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#2F4FA8; --blue2:#3D63C4; --navy:#16265C; --light:#D9E4F8; --light2:#EEF3FD;
+  --cream:#F7F0DC; --gold:#C9A227; --gold2:#E3C766; --ink:#1c2440; --muted:#6b7390;
+  --card:#ffffff; --line:#e3e9f7; --green:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',sans-serif;background:var(--light2);color:var(--ink);padding-bottom:96px}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+a{text-decoration:none;color:inherit}
+
+/* ===== Header ===== */
+header{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;box-shadow:0 4px 18px rgba(22,38,92,.35)}
+.hbar{max-width:1100px;margin:auto;display:flex;align-items:center;gap:12px;padding:10px 16px}
+.hbar .logo{width:52px;height:52px;flex:0 0 auto}
+.hbar .t{flex:1;line-height:1.15}
+.hbar .t b{font-family:'Aref Ruqaa',serif;font-size:22px;font-weight:700;display:block}
+.hbar .t span{font-size:11px;letter-spacing:2px;color:var(--gold2);font-weight:700}
+.cartbtn{position:relative;background:var(--gold);color:var(--navy);font-weight:800;border-radius:999px;padding:9px 16px;font-size:14px;display:flex;align-items:center;gap:7px}
+.cartbtn .n{background:var(--navy);color:#fff;border-radius:999px;min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;padding:0 5px}
+
+/* ===== Hero ===== */
+.hero{background:linear-gradient(180deg,var(--blue) 0%,var(--blue2) 70%,var(--light) 100%);color:#fff;text-align:center;padding:26px 16px 30px;position:relative;overflow:hidden}
+.hero .logo{width:118px;height:118px;margin:0 auto 8px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.35))}
+.hero h1{font-family:'Aref Ruqaa',serif;font-size:40px;line-height:1.2;text-shadow:0 2px 10px rgba(0,0,0,.25)}
+.hero .en{letter-spacing:5px;font-weight:800;color:var(--cream);font-size:15px;margin-top:2px}
+.hero p.tag{margin-top:8px;font-size:15px;color:#eaf0ff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;backdrop-filter:blur(3px)}
+.chip b{color:var(--gold2)}
+
+/* ===== Category nav ===== */
+.catnav{position:sticky;top:72px;z-index:40;background:var(--cream);border-bottom:2px solid var(--gold);box-shadow:0 3px 10px rgba(22,38,92,.10)}
+.catnav .in{max-width:1100px;margin:auto;display:flex;gap:8px;overflow-x:auto;padding:10px 14px;scrollbar-width:none}
+.catnav .in::-webkit-scrollbar{display:none}
+.catnav button{white-space:nowrap;background:#fff;border:1.5px solid var(--blue);color:var(--blue);font-weight:800;font-size:13.5px;border-radius:999px;padding:7px 16px;transition:.15s}
+.catnav button.on{background:var(--blue);color:#fff}
+
+/* ===== Menu ===== */
+main{max-width:1100px;margin:auto;padding:8px 14px 20px}
+section.cat{scroll-margin-top:140px;margin-top:26px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sec-head h2{font-family:'Aref Ruqaa',serif;font-size:26px;color:var(--navy);background:var(--cream);border:1.5px solid var(--gold);border-radius:14px;padding:4px 20px 8px;box-shadow:0 3px 8px rgba(201,162,39,.25)}
+.sec-head .line{flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:6px;box-shadow:0 2px 8px rgba(22,38,92,.06)}
+.item .nm{font-weight:800;font-size:16.5px;color:var(--navy)}
+.item .en{font-size:11px;letter-spacing:1px;color:var(--muted);font-weight:700;text-transform:uppercase}
+.item .ds{font-size:13px;color:#4a5470;line-height:1.7}
+.item .row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:8px}
+.price{font-weight:900;color:var(--blue);font-size:17px}
+.price small{font-size:11px;color:var(--muted);font-weight:700}
+.cal{font-size:11px;background:var(--light2);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:2px 9px;font-weight:700}
+.add{background:var(--blue);color:#fff;font-weight:800;border-radius:999px;padding:8px 18px;font-size:14px;transition:.15s}
+.add:active{transform:scale(.95)}
+.step{display:flex;align-items:center;gap:10px;background:var(--light2);border:1.5px solid var(--blue);border-radius:999px;padding:4px 8px}
+.step button{width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font-size:18px;font-weight:900;line-height:1;display:flex;align-items:center;justify-content:center}
+.step b{min-width:20px;text-align:center;font-size:16px;color:var(--navy)}
+.item.feat{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border:none;grid-column:1/-1}
+.item.feat .nm{color:#fff;font-size:20px}
+.item.feat .en{color:var(--gold2)}
+.item.feat .ds{color:#dbe6ff}
+.item.feat .price{color:var(--gold2)}
+.item.feat .cal{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:#fff}
+.item.feat .add{background:var(--gold);color:var(--navy)}
+.badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:11px;font-weight:900;border-radius:999px;padding:2px 10px;margin-bottom:4px}
+
+/* ===== Cart bar & drawer ===== */
+.cartbar{position:fixed;bottom:0;right:0;left:0;z-index:60;background:var(--navy);color:#fff;padding:12px 16px;display:none;align-items:center;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,.3)}
+.cartbar.show{display:flex}
+.cartbar .tot{font-weight:900;font-size:17px}
+.cartbar .tot small{display:block;font-size:11px;color:var(--gold2);font-weight:700}
+.cartbar button{margin-inline-start:auto;background:var(--gold);color:var(--navy);font-weight:900;border-radius:999px;padding:11px 24px;font-size:15px}
+.overlay{position:fixed;inset:0;background:rgba(10,18,45,.55);z-index:70;display:none}
+.overlay.show{display:block}
+.drawer{position:fixed;bottom:0;right:0;left:0;z-index:80;background:#fff;border-radius:22px 22px 0 0;max-height:88vh;overflow-y:auto;padding:18px 18px 26px;transform:translateY(105%);transition:transform .3s;max-width:640px;margin:auto}
+.drawer.show{transform:translateY(0)}
+.drawer h3{font-family:'Aref Ruqaa',serif;color:var(--navy);font-size:24px;margin-bottom:6px}
+.drawer .sub{font-size:13px;color:var(--muted);margin-bottom:12px}
+.citem{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.citem .nm{flex:1;font-weight:700;font-size:15px}
+.citem .pr{font-weight:800;color:var(--blue);min-width:64px;text-align:left}
+.drawer .total{display:flex;justify-content:space-between;font-weight:900;font-size:18px;color:var(--navy);padding:14px 0 4px}
+.drawer label{display:block;font-size:13px;font-weight:800;color:var(--navy);margin:12px 0 5px}
+.drawer input,.drawer textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:11px 12px;font-family:inherit;font-size:15px;background:var(--light2)}
+.drawer input:focus,.drawer textarea:focus{outline:none;border-color:var(--blue)}
+.wa{width:100%;background:var(--green);color:#fff;font-weight:900;font-size:17px;border-radius:14px;padding:15px;margin-top:18px;display:flex;align-items:center;justify-content:center;gap:9px}
+.wa:disabled{opacity:.5}
+.empty{text-align:center;color:var(--muted);padding:26px 0;font-weight:700}
+.close{position:absolute;top:14px;inset-inline-end:16px;font-size:22px;color:var(--muted);width:36px;height:36px}
+
+/* ===== Footer ===== */
+footer{background:var(--navy);color:#dbe6ff;margin-top:40px;padding:30px 16px 110px;text-align:center}
+footer .logo{width:74px;height:74px;margin:0 auto 8px}
+footer h4{font-family:'Aref Ruqaa',serif;color:#fff;font-size:24px}
+footer .en{letter-spacing:4px;color:var(--gold2);font-weight:800;font-size:12px}
+footer .info{margin-top:16px;font-size:14px;line-height:2}
+footer .info b{color:#fff}
+footer a.btn{display:inline-block;margin:6px 4px 0;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 20px;font-weight:800;font-size:14px;color:#fff}
+footer .copy{margin-top:18px;font-size:12px;color:#8fa3d9}
+
+/* toast */
+.toast{position:fixed;top:84px;left:50%;transform:translate(-50%,-16px);background:var(--navy);color:#fff;font-weight:800;font-size:14px;border-radius:999px;padding:10px 22px;z-index:90;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:560px){.hero h1{font-size:32px}.grid{grid-template-columns:1fr 1fr;gap:9px}.item{padding:11px}.item .nm{font-size:14.5px}.price{font-size:15px}.add{padding:7px 13px;font-size:13px}}
+</style>
+</head>
+<body>
+<!-- ===== Logo (recreated from the restaurant's printed menu emblem: ship's wheel + fish) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="hamora-logo" viewBox="0 0 100 100">
+  <g stroke="#C9A227" stroke-width="4" stroke-linecap="round">
+    <line x1="50" y1="50" x2="88" y2="50"/><line x1="50" y1="50" x2="77" y2="77"/>
+    <line x1="50" y1="50" x2="50" y2="88"/><line x1="50" y1="50" x2="23" y2="77"/>
+    <line x1="50" y1="50" x2="12" y2="50"/><line x1="50" y1="50" x2="23" y2="23"/>
+    <line x1="50" y1="50" x2="50" y2="12"/><line x1="50" y1="50" x2="77" y2="23"/>
+  </g>
+  <g fill="#C9A227">
+    <circle cx="90" cy="50" r="3.6"/><circle cx="78.5" cy="78.5" r="3.6"/>
+    <circle cx="50" cy="90" r="3.6"/><circle cx="21.5" cy="78.5" r="3.6"/>
+    <circle cx="10" cy="50" r="3.6"/><circle cx="21.5" cy="21.5" r="3.6"/>
+    <circle cx="50" cy="10" r="3.6"/><circle cx="78.5" cy="21.5" r="3.6"/>
+  </g>
+  <circle cx="50" cy="50" r="30" fill="#16265C" stroke="#C9A227" stroke-width="4.5"/>
+  <circle cx="50" cy="50" r="19.5" fill="#F7F0DC"/>
+  <path d="M35 50 C42 43 52 42 57 46 L64 41 C62.5 46 62.5 54 64 59 L57 54 C52 58 42 57 35 50 Z" fill="#2F4FA8"/>
+  <circle cx="41.5" cy="48" r="1.9" fill="#F7F0DC"/>
+  <path d="M39 61 Q44 58.5 49 61 T59 61" stroke="#2F4FA8" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+</symbol>
+</defs>
+</svg>
+
+<header>
+  <div class="hbar">
+    <svg class="logo"><use href="#hamora-logo"/></svg>
+    <div class="t"><b>هامورا لاند</b><span>HAMORA LAND</span></div>
+    <button class="cartbtn" onclick="openCart()">🛒 السلة <span class="n" id="cartN">0</span></button>
+  </div>
+</header>
+
+<div class="hero">
+  <svg class="logo"><use href="#hamora-logo"/></svg>
+  <h1>هامورا لاند</h1>
+  <div class="en">HAMORA LAND</div>
+  <p class="tag">ألذ المأكولات البحرية في أبها 🐟</p>
+  <div class="chips">
+    <span class="chip">📍 طريق الأمير سلطان، <b>أبها</b></span>
+    <span class="chip">🕐 يوميًا من <b>12:15 ظهرًا</b> حتى <b>2 فجرًا</b></span>
+    <span class="chip">📞 <b dir="ltr">056 669 5303</b></span>
+  </div>
+</div>
+
+<nav class="catnav"><div class="in" id="catNav"></div></nav>
+
+<main id="menu"></main>
+
+<div class="cartbar" id="cartBar">
+  <div class="tot"><small id="cartCount">0 صنف</small><span id="cartTotal">0</span> ر.س</div>
+  <button onclick="openCart()">عرض السلة والطلب</button>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div class="drawer" id="drawer">
+  <button class="close" onclick="closeCart()">✕</button>
+  <h3>سلة الطلب</h3>
+  <div class="sub">راجع طلبك وبعدين ابعته واتساب للمطعم</div>
+  <div id="cartItems"></div>
+  <div class="total"><span>الإجمالي</span><span><span id="drawerTotal">0</span> ر.س</span></div>
+  <label>الاسم</label>
+  <input id="custName" type="text" placeholder="اسمك الكريم">
+  <label>رقم الجوال</label>
+  <input id="custPhone" type="tel" placeholder="05xxxxxxxx">
+  <label>ملاحظات (اختياري)</label>
+  <textarea id="custNotes" rows="2" placeholder="أي طلبات خاصة؟"></textarea>
+  <button class="wa" id="waBtn" onclick="sendOrder()">💬 إرسال الطلب عبر واتساب</button>
+</div>
+
+<footer>
+  <svg class="logo"><use href="#hamora-logo"/></svg>
+  <h4>هامورا لاند</h4>
+  <div class="en">HAMORA LAND</div>
+  <div class="info">
+    📍 <b>العنوان:</b> طريق الأمير سلطان، مجمع بارك أبها، أبها<br>
+    🕐 <b>ساعات العمل:</b> السبت – الأربعاء: 12:15م – 2:00ص | الخميس: 12:15م – 2:30ص | الجمعة: 1:00م – 12:30ص<br>
+    📞 <b>الهاتف / واتساب:</b> <span dir="ltr">056 669 5303</span>
+  </div>
+  <a class="btn" href="tel:+966566695303">📞 اتصال</a>
+  <a class="btn" href="https://wa.me/966566695303" target="_blank" rel="noopener">💬 واتساب</a>
+  <a class="btn" href="https://www.instagram.com/hamora_land/" target="_blank" rel="noopener">📷 انستقرام</a>
+  <div class="copy">مطعم هامورا لاند للمأكولات البحرية — أبها © 2026</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const WA_NUMBER = "966566695303"; // رقم واتساب المطعم
+
+const MENU = [
+ {id:"platter", name:"صحن الصياد", items:[
+   {n:"صحن الصياد", e:"Fisherman's Platter", p:176, cal:670, feat:true, d:"صيادنا اختار لكم ألذ خيرات البحر في صحن واحد لعشاق المذاق البحري: سيباس مشوي، كراب، جمبري مقلي، فيليه مقلي، أرز مكس."}
+ ]},
+ {id:"mains", name:"أطباق رئيسية", items:[
+   {n:"هامور مقلي", e:"Fried Hamour", p:98, cal:670},
+   {n:"هامور مقلي كبير", e:"Large Fried Hamour", p:166, cal:935},
+   {n:"سمك فيليه", e:"Fish Fillet", p:76, cal:570},
+   {n:"سيباس", e:"Seabass", p:86, pr:"86–98", cal:"470–630", note:"السعر حسب الحجم"},
+   {n:"سلمون", e:"Salmon", p:89, cal:390},
+   {n:"كنعد", e:"Kingfish", p:75, cal:415},
+   {n:"كراب فرنسي", e:"French Crab", p:69, cal:570},
+   {n:"استاكوزا فرنسية", e:"French Lobster", p:162, cal:420},
+   {n:"جمبري مشوي", e:"Grilled Shrimp", p:79, cal:400},
+   {n:"جمبري مقلي", e:"Fried Shrimp", p:69},
+   {n:"شعور", e:"Shueur", p:79, cal:425},
+   {n:"سوبريم", e:"Supreme", p:82, cal:463},
+   {n:"دجاج مشوي", e:"Grilled Chicken", p:59, cal:420}
+ ]},
+ {id:"fukhar", name:"مذاق البحر بالفخار", items:[
+   {n:"فخار جمبري", e:"Shrimp", p:76, cal:400},
+   {n:"فخار محار", e:"Muhaar", p:68, cal:450},
+   {n:"فخار سمك", e:"Fish", p:72, cal:570},
+   {n:"فخار جمبري كريمة", e:"Creamy Shrimp", p:69, cal:270},
+   {n:"فخار جمبري سوتيه", e:"Sautéed Shrimp", p:72, cal:220},
+   {n:"فخار استاكوزا", e:"Lobster", p:146, cal:420},
+   {n:"فخار كراب", e:"Crab", p:68},
+   {n:"فخار مكس", e:"Mix", p:176, cal:800},
+   {n:"فخار جمبري كاري", e:"Shrimp Curry", p:69, cal:250},
+   {n:"فخار جمبري أجبان ثلاثة", e:"Three-Cheese Shrimp", p:68, cal:463}
+ ]},
+ {id:"starters", name:"البدايات الشهية", items:[
+   {n:"متبل", e:"Mutabbal", p:18, cal:150},
+   {n:"حمص", e:"Hummus", p:18, cal:166},
+   {n:"مكس هامورا", e:"Hamora Mix", p:39, cal:185}
+ ]},
+ {id:"salads", name:"سلطات", items:[
+   {n:"سلطة سي فود", e:"Seafood Salad", p:25, cal:245},
+   {n:"سلطة سيزر", e:"Caesar Salad", p:28, cal:320},
+   {n:"سلطة جرجير", e:"Arugula Salad", p:18, cal:130},
+   {n:"تبولة", e:"Tabbouleh", p:19, cal:199},
+   {n:"سلطة كينوا", e:"Quinoa Salad", p:25, cal:215}
+ ]},
+ {id:"soup", name:"الشوربة والباستا", items:[
+   {n:"شوربة سي فود", e:"Seafood Soup", p:28, cal:230},
+   {n:"شوربة هامورا", e:"Hamora Soup", p:28, cal:275},
+   {n:"باستا شرمب", e:"Shrimp Pasta", p:56, cal:285}
+ ]},
+ {id:"rice", name:"أرز وأطباق جانبية", items:[
+   {n:"أرز صيادية", e:"Sayadieh Rice", p:12, cal:270},
+   {n:"أرز أبيض", e:"White Rice", p:9, cal:230},
+   {n:"أرز مكس", e:"Mixed Rice", p:11, cal:250},
+   {n:"بطاطس ودجز", e:"Potato Wedges", p:17, cal:330},
+   {n:"بطاطس مقلية", e:"French Fries", p:14, cal:400}
+ ]},
+ {id:"sauces", name:"صوصات", items:[
+   {n:"صوص الترتار", e:"Tartar", p:3},
+   {n:"صوص كوكتيل", e:"Cocktail", p:3},
+   {n:"صوص حمر", e:"Homr", p:3},
+   {n:"صوص هامورا", e:"Hamora", p:3}
+ ]},
+ {id:"sweet", name:"الحلويات والمشروبات", items:[
+   {n:"أم علي", e:"Om Ali", p:15, cal:167},
+   {n:"أرز باللبن", e:"Rice Pudding", p:12, cal:113},
+   {n:"مشروب غازي", e:"Soft Drink", p:5, cal:150},
+   {n:"بربيكان", e:"Barbican", p:9, cal:150},
+   {n:"مياه معدنية", e:"Mineral Water", p:5, cal:0},
+   {n:"عصير مانجو", e:"Mango Juice", p:12, cal:170},
+   {n:"عصير فراولة", e:"Strawberry Juice", p:12, cal:108},
+   {n:"عصير برتقال", e:"Orange Juice", p:14, cal:110}
+ ]}
+];
+
+// flatten with ids
+const ITEMS = {};
+MENU.forEach((c,ci)=>c.items.forEach((it,ii)=>{ it.id = "c"+ci+"i"+ii; ITEMS[it.id]=it; }));
+
+let cart = {}; // id -> qty
+
+const $ = s => document.querySelector(s);
+
+function showMsg(t){
+  const el = $("#toast"); el.textContent = t; el.classList.add("show");
+  clearTimeout(el._t); el._t = setTimeout(()=>el.classList.remove("show"), 1800);
+}
+
+function renderMenu(){
+  const nav = $("#catNav"), main = $("#menu");
+  nav.innerHTML = ""; main.innerHTML = "";
+  MENU.forEach((c,ci)=>{
+    const b = document.createElement("button");
+    b.textContent = c.name; b.dataset.cat = c.id;
+    b.onclick = ()=> document.getElementById("sec-"+c.id).scrollIntoView({behavior:"smooth"});
+    nav.appendChild(b);
+
+    const sec = document.createElement("section");
+    sec.className = "cat"; sec.id = "sec-"+c.id;
+    sec.innerHTML = `<div class="sec-head"><h2>${c.name}</h2><div class="line"></div></div>`;
+    const grid = document.createElement("div"); grid.className = "grid";
+    c.items.forEach(it=>{
+      const card = document.createElement("div");
+      card.className = "item" + (it.feat ? " feat" : "");
+      card.id = "card-"+it.id;
+      card.innerHTML = `
+        ${it.feat ? '<span class="badge">⭐ طبق الصياد المميز</span>' : ""}
+        <div class="nm">${it.n}</div>
+        <div class="en">${it.e}</div>
+        ${it.d ? `<div class="ds">${it.d}</div>` : ""}
+        <div class="row">
+          <span class="price">${it.pr || it.p} <small>ر.س</small></span>
+          ${it.cal !== undefined ? `<span class="cal">${it.cal} سعرة</span>` : ""}
+          <span class="ctl" id="ctl-${it.id}"></span>
+        </div>`;
+      grid.appendChild(card);
+    });
+    sec.appendChild(grid);
+    main.appendChild(sec);
+  });
+  MENU.forEach(c=>c.items.forEach(it=>renderCtl(it.id)));
+}
+
+function renderCtl(id){
+  const el = document.getElementById("ctl-"+id); if(!el) return;
+  const q = cart[id] || 0;
+  if(q === 0){
+    el.innerHTML = `<button class="add" onclick="addItem('${id}')">أضف +</button>`;
+  } else {
+    el.innerHTML = `<span class="step">
+      <button onclick="chg('${id}',1)">+</button><b>${q}</b><button onclick="chg('${id}',-1)">−</button>
+    </span>`;
+  }
+}
+
+function addItem(id){
+  cart[id] = (cart[id]||0) + 1;
+  renderCtl(id); updateCartUI();
+  showMsg("اتضاف " + ITEMS[id].n + " للسلة ✅");
+}
+function chg(id, d){
+  cart[id] = (cart[id]||0) + d;
+  if(cart[id] <= 0) delete cart[id];
+  renderCtl(id); updateCartUI(); renderDrawer();
+}
+
+function cartTotals(){
+  let count = 0, total = 0;
+  Object.entries(cart).forEach(([id,q])=>{ count += q; total += ITEMS[id].p * q; });
+  return {count, total};
+}
+
+function updateCartUI(){
+  const {count, total} = cartTotals();
+  $("#cartN").textContent = count;
+  $("#cartCount").textContent = count + (count === 1 ? " صنف" : " أصناف");
+  $("#cartTotal").textContent = total;
+  $("#drawerTotal").textContent = total;
+  $("#cartBar").classList.toggle("show", count > 0);
+}
+
+function renderDrawer(){
+  const box = $("#cartItems");
+  const ids = Object.keys(cart);
+  if(!ids.length){ box.innerHTML = '<div class="empty">السلة فاضية — اختار من المنيو 🐟</div>'; return; }
+  box.innerHTML = "";
+  ids.forEach(id=>{
+    const it = ITEMS[id], q = cart[id];
+    const row = document.createElement("div"); row.className = "citem";
+    row.innerHTML = `
+      <span class="nm">${it.n}${it.note ? ' <small style="color:var(--muted)">('+it.note+')</small>' : ""}</span>
+      <span class="step"><button onclick="chg('${id}',1)">+</button><b>${q}</b><button onclick="chg('${id}',-1)">−</button></span>
+      <span class="pr">${it.p*q} ر.س</span>`;
+    box.appendChild(row);
+  });
+}
+
+function openCart(){ renderDrawer(); $("#overlay").classList.add("show"); $("#drawer").classList.add("show"); }
+function closeCart(){ $("#overlay").classList.remove("show"); $("#drawer").classList.remove("show"); }
+
+function sendOrder(){
+  const ids = Object.keys(cart);
+  if(!ids.length){ showMsg("السلة فاضية، ضيف أصناف الأول"); return; }
+  const name = $("#custName").value.trim();
+  const phone = $("#custPhone").value.trim();
+  const notes = $("#custNotes").value.trim();
+  const {total} = cartTotals();
+  let lines = ["طلب جديد من موقع هامورا لاند 🐟", "----------------"];
+  ids.forEach(id=>{
+    const it = ITEMS[id];
+    lines.push(`• ${it.n} × ${cart[id]} = ${it.p*cart[id]} ر.س${it.note ? " ("+it.note+" "+(it.pr||"")+")" : ""}`);
+  });
+  lines.push("----------------", `الإجمالي: ${total} ر.س`);
+  if(name) lines.push("الاسم: " + name);
+  if(phone) lines.push("الجوال: " + phone);
+  if(notes) lines.push("ملاحظات: " + notes);
+  window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
+}
+
+// category scroll-spy
+window.addEventListener("scroll", ()=>{
+  let cur = null;
+  MENU.forEach(c=>{
+    const el = document.getElementById("sec-"+c.id);
+    if(el && el.getBoundingClientRect().top <= 160) cur = c.id;
+  });
+  document.querySelectorAll("#catNav button").forEach(b=>b.classList.toggle("on", b.dataset.cat === cur));
+}, {passive:true});
+
+renderMenu();
+updateCartUI();
+</script>
+</body>
+</html>
